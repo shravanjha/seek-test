@@ -1,7 +1,7 @@
 Recruiter System
 ===================
 
-An example micro-frontend system where recruiter can select different products for job posting on job portal and checkout. The system has multiple types of offers/discounts application to customers.
+An example micro-frontend system where recruiter can select different products for job posting on job portal and checkout. The system has multiple types of offers/discounts applicable to customers.
 
 ## Installation and Run
 
@@ -30,7 +30,8 @@ The visit the [home page](http://localhost:3000/).
 ### Login details
 
 username/password
-default/123
-SecondBite/123
-AxilCoffee/123
-Myer/123
+
+- default/123
+- SecondBite/123
+- AxilCoffee/123
+- Myer/123
