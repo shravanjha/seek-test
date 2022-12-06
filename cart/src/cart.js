@@ -64,6 +64,23 @@ export const login = (username, password) =>
       return data.access_token;
     });
 
+export const logout = (username) =>
+  fetch(`${API_SERVER}/auth/logout`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username
+    }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      jwt.next(data.access_token);
+      clearCart();
+      return data.access_token;
+    });
+
 export function useLoggedIn() {
   const [loggedIn, setLoggedIn] = useState(!!jwt.value);
   useEffect(() => {

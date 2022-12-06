@@ -11,4 +11,8 @@ export class AppController {
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
+  @Post('auth/logout')
+  async logout(@Request() req) {
+    return this.authService.logout(req.username);
+  }
 }

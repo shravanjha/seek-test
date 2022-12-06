@@ -20,7 +20,7 @@ export default function CartContent() {
             <img src={item.image} alt={item.name} className="max-h-6" />
             <div>{item.name}</div>
             <div className="text-right">
-              {currency.format(item.quantity * item.price)}
+              {currency.format((item.quantity * item.price) - item.discount)}
             </div>
           </React.Fragment>
         ))}
@@ -28,7 +28,7 @@ export default function CartContent() {
         <div></div>
         <div></div>
         <div className="text-right" id="grand_total">
-          {currency.format(items.reduce((a, v) => a + v.quantity * v.price, 0))}
+          {currency.format(items.reduce((a, v) => a + (v.quantity * v.price) - v.discount, 0))}
         </div>
       </div>
       {items.length > 0 && (

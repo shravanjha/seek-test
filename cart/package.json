@@ -1,5 +1,5 @@
 {
-  "name": "cart",
+  "name": "@seek/cart",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",

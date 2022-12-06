@@ -1,0 +1,20 @@
+{
+  "name": "@seek/web-app",
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @seek/* --parallel start",
+    "build": "lerna run --scope @seek/* build",
+    "serve": "lerna run --scope @seek/* --parallel serve",
+    "clean": "lerna run --scope @seek/* --parallel clean"
+  },
+  "workspaces": [
+    "addtocart",
+    "cart",
+    "home",
+    "pdp",
+    "server"
+  ],
+  "devDependencies": {
+    "lerna": "^5.1.8"
+  }
+}

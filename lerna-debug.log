@@ -1,0 +1,20 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   scope: '@seek/*',
+0 silly argv   parallel: true,
+0 silly argv   lernaVersion: '5.6.2',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'start'
+0 silly argv }
+1 notice cli v5.6.2
+2 verbose rootPath F:\AppBleed\SourceCode\seek-test
+3 error Error: Invalid package name "@": name can only contain URL-friendly characters
+3 error     at invalidPackageName (F:\AppBleed\SourceCode\seek-test\node_modules\npm-package-arg\npa.js:89:15)
+3 error     at Result.setName (F:\AppBleed\SourceCode\seek-test\node_modules\npm-package-arg\npa.js:124:11)
+3 error     at new Result (F:\AppBleed\SourceCode\seek-test\node_modules\npm-package-arg\npa.js:114:23)
+3 error     at Function.resolve (F:\AppBleed\SourceCode\seek-test\node_modules\npm-package-arg\npa.js:61:15)
+3 error     at F:\AppBleed\SourceCode\seek-test\node_modules\@lerna\package-graph\index.js:89:30
+3 error     at Array.forEach (<anonymous>)
+3 error     at F:\AppBleed\SourceCode\seek-test\node_modules\@lerna\package-graph\index.js:60:38
+3 error     at Map.forEach (<anonymous>)
+3 error     at new PackageGraph (F:\AppBleed\SourceCode\seek-test\node_modules\@lerna\package-graph\index.js:49:10)

@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 
-import { login, useLoggedIn } from "./cart";
+import { login, logout, useLoggedIn } from "./cart";
 
 export default function Login() {
   const loggedIn = useLoggedIn();
   const [showLogin, setShowLogin] = useState(false);
 
-  const [username, setUsername] = useState("sally");
+  const [username, setUsername] = useState("default");
   const [password, setPassword] = useState("123");
 
-  if (loggedIn) return null;
+  if (loggedIn) return (<>
+      <span onClick={() => logout(username)}>
+        <i className="ri-logout-box-line text-2xl ml-4"></i>
+      </span>
+  </>);
 
   return (
     <>
       <span onClick={() => setShowLogin(!showLogin)}>
-        <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
+        <i className="ri-login-box-line text-2xl" id="showlogin"></i>
       </span>
       {showLogin && (
         <div
