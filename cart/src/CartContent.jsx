@@ -13,22 +13,38 @@ export default function CartContent() {
 
   return (
     <>
-      <div className="my-10 grid grid-cols-4 gap-5">
+      <div className="my-10 grid grid-cols-6 gap-5">
+        <div><b>Qty</b></div>
+        <div><b>Image</b></div>
+        <div><b>Subscription</b></div>
+        <div className="text-right"><b>Cost</b></div>
+        <div className="text-right"><b>Discount</b></div>
+        <div className="text-right"><b>SubTotal</b></div>
         {items.map((item) => (
           <React.Fragment key={item.id}>
             <div>{item.quantity}</div>
             <img src={item.image} alt={item.name} className="max-h-6" />
             <div>{item.name}</div>
             <div className="text-right">
+              {currency.format(item.quantity * item.price)}
+            </div>
+            <div className="text-right">
+              -{currency.format(item.discount)}
+            </div>
+            <div className="text-right">
               {currency.format((item.quantity * item.price) - item.discount)}
             </div>
           </React.Fragment>
         ))}
+        <div><b>Grand Total</b></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div className="text-right" id="grand_total">
-          {currency.format(items.reduce((a, v) => a + (v.quantity * v.price) - v.discount, 0))}
+          <b>
+            {currency.format(items.reduce((a, v) => a + (v.quantity * v.price) - v.discount, 0))}
+          </b>
         </div>
       </div>
       {items.length > 0 && (
